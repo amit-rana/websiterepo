@@ -1,0 +1,49 @@
+/*@media screen and (min-width: 1px) and (max-width: 480px){
+  #portfolios[data-columns]::before {
+    content: '1 col-xs-12';
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px){
+  #portfolios[data-columns]::before {
+    content: '2 col-xs-6';
+  }
+}
+@media screen and (min-width:768px) and (max-width: 991px){
+  #portfolios[data-columns]::before {
+    content: '3 col-sm-4';
+  }
+}
+@media screen and (min-width:992px) and (max-width: 9999px){
+  #portfolios[data-columns]::before {
+    content: '4 col-md-3';
+  }
+}*/
+
+
+@media screen and (max-width: 480px){
+	#grid[data-columns]::before {
+		content: '1 .column.size-1of1';
+	}
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+	#grid[data-columns]::before {
+		content: '2 .column.size-1of2';
+	}
+}
+@media screen and (min-width: 769px) {
+	#grid[data-columns]::before {
+		content: '3 .column.size-1of3';
+	}
+}
+
+/* Again, you’re free to use and define the classes: */
+.column { float: left; }
+.size-1of1 { width: 100%; }
+.size-1of2 { width: 50%; }
+.size-1of3 { width: 33.333%; }
+
+.item.panel.panel-primary {
+	margin: 10px;
+}

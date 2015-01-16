@@ -16,3 +16,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.listen(app.get('port'), function() {
   console.log('Express server listening on port ' + app.get('port'));
 });
+
+app.get('/api/portfolio', function(req, res) {
+	var portfolios = require('./portfolio.json');
+	// console.log(portfolios);
+	// res.send(200);
+   res.send(portfolios);
+  // res.(portfolios)
+});
+
+app.get('*', function(req, res) {
+  res.redirect('/#' + req.originalUrl);
+});
+
