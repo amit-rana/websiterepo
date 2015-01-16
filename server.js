@@ -26,9 +26,9 @@ app.get('/api/portfolio', function(req, res) {
 });
 
 
-app.get('/images/*', function(req, res) {
-  res.redirect(req.originalUrl);
-});
+// app.get('/images/*', function(req, res) {
+//   res.redirect(req.originalUrl);
+// });
 
 app.get('*', function(req, res) {
   res.redirect('/#' + req.originalUrl);
