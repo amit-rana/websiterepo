@@ -4,7 +4,7 @@ angular.module('MyApp')
     	function append(d){
 		  var grid = document.querySelector('#grid');
 		  var item = document.createElement('div');
-		  var h = '<div class="item panel panel-primary">';
+		  var h = '<div class="item itemInit panel panel-primary">';
 		      h += '<div class="panel-heading">';
 		      h += d.details.title;
 		      h += '</div>';
@@ -15,18 +15,34 @@ angular.module('MyApp')
 		      h += '</div>';
 			  salvattore['append_elements'](grid, [item])
 			  item.outerHTML = h;
+
 		}
 
 	  $http.get('/api/portfolio').
 	  success(function(data, status, headers, config) {
-	  	console.log(data);
+	  	// console.log(data);
+	  	var i = 0;
+	  	var j = 0;
 	  	if(data.length > 0){
-
 	  		data.forEach(function(d){
 	  			// $scope.portfolios = data;
-	  			append(d);		
-	  		})
+	  			i++;
+	  			setTimeout(function(){
+	  				j++;
+	  			 	append(d);	
+	  			 	if(j >= data.length){
+		  				setTimeout(function(){
+			  				$(".itemInit").removeClass('itemInit');	
+			  			  }
+			  			, 2000);
+		  			}
+	  			  }
+	  			, (i*150));
+	  			// append(d);
+	  			
+	  		});
 	  	}
+	  	 
 	  }).
 	  error(function(data, status, headers, config) {
 	    

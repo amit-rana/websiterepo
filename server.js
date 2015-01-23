@@ -25,7 +25,6 @@ app.get('/api/portfolio', function(req, res) {
   // res.(portfolios)
 });
 
-
 // app.get('/images/*', function(req, res) {
 //   res.redirect(req.originalUrl);
 // });
@@ -33,4 +32,7 @@ app.get('/api/portfolio', function(req, res) {
 app.get('*', function(req, res) {
   res.redirect('/#' + req.originalUrl);
 });
+
+
+
 

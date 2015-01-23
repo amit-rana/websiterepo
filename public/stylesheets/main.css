@@ -44,6 +44,34 @@
 .size-1of2 { width: 50%; }
 .size-1of3 { width: 33.333%; }
 
+/*.mainContainer{margin-top: 50px;}*/
+
 .item.panel.panel-primary {
-	margin: 10px;
+  margin: 10px;
+}
+
+.itemInit{
+  margin-bottom:10px;
+  margin-left:10px;
+  margin-right:10px;
+  animation-name: fly;
+  animation-duration: 0.8s ;
+
+  -moz-animation-name: fly;
+  -moz-animation-duration: 0.8s ;
+
+  -webkit-animation-name: fly;
+  -webkit-animation-duration: 0.8s ;
+}
+@-webkit-keyframes fly {
+  from { margin-top: 2000px;opacity: 0; }
+    to { margin-top: 10px;opacity: 1; }
+}
+@-moz-keyframes fly {
+ from { margin-top: 2000px; opacity: 0;}
+    to { margin-top: 10px; opacity: 1;}
+}
+@keyframes fly {
+  from { margin-top: 2000px; opacity: 0;}
+    to { margin-top: 10px; opacity: 1;}
 }

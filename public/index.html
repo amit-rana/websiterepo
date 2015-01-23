@@ -12,7 +12,7 @@
   <link href="stylesheets/main.css" rel="stylesheet">
 </head>
 <body>
-<div class="navbar navbar-default navbar-static-top" role="navigation" bs-navbar>
+<div class="navbar navbar-default navbar-static-top " role="navigation" bs-navbar>
   <div class="navbar-header">
     <a class="navbar-brand" href="/">
       <span>Ameet<strong>Rana</strong></span>
@@ -25,11 +25,12 @@
   </ul>
 </div>
 
-<div ng-view class="{{pageClass}}"></div>
+<div ng-view class="mainContainer"></div>
 
 <script src="vendor/jquery.js"></script>
 <script src="vendor/bootstrap.min.js"></script>
 <!-- <script src="vendor/salvattore.min.js"></script> -->
+<script type="text/javascript" src="vendor/jssor.slider.mini.js"></script>
 <script src="vendor/angular.js"></script>
 <script src="vendor/angular-route.js"></script>
 
@@ -39,7 +40,7 @@
 <script src="controllers/portfolio.js"></script>
 <script src="controllers/portfolioItem.js"></script>
 <script src="controllers/about.js"></script>
-<script src="controllers/fancyboxDirective.js"></script>
+<!-- <script src="controllers/fancyboxDirective.js"></script> -->
 
 </body>
 </html>
