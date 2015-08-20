@@ -24,7 +24,6 @@ angular.module('MyApp', ['ngRoute'])
       });
   })
   .config(function ($httpProvider) {
-    // console.log($httpProvider);
     $httpProvider.interceptors.push(function ($rootScope, $q, $window, $location) {
       return {
         request: function(config) {
@@ -36,6 +35,7 @@ angular.module('MyApp', ['ngRoute'])
         responseError: function(response) {
           if (response.status === 401 || response.status === 403) {
             $location.path('/');
+
           }
           return $q.reject(response);
         }
